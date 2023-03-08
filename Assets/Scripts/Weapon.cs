@@ -33,6 +33,7 @@ public class Weapon : MonoBehaviour
             }
 
             Instantiate(impactEffect, hitInfo.point, Quaternion.identity);
+            Destroy(impactEffect);
 
             lineRenderer.SetPosition(0,firePoint.position);
             lineRenderer.SetPosition(1, firePoint.position);
