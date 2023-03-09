@@ -1,3 +1,3 @@
-Arreglar Instanciado de Raycast
-Arreglar Instanciado de Boom
-Intentar Dinamizar el FirePoint
+Arreglar Instanciado de Raycast :D
+Arreglar Instanciado de Boom :D
+Intentar Dinamizar el FirePoint INPROGRESS

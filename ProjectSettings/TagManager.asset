@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Visible
+    uniqueID: 42089757
+    locked: 0
+  - name: Ocultable
+    uniqueID: 148871541
+    locked: 0
+  - name: Invisible
+    uniqueID: 1039166123
+    locked: 0
