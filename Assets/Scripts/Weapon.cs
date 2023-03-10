@@ -12,10 +12,12 @@ public class Weapon : MonoBehaviour
     [SerializeField]private LineRenderer lineRenderer;
     [SerializeField] private float timeBullet,xValue,yValue;
     float chorreroMaths;
+    public Vector2 VectorDirector;
 
         private void Start()
         {
         chorreroMaths = Mathf.Sqrt(Mathf.Pow(fireShotMax.position.x - firePoint.position.x, 2) + Mathf.Pow(fireShotMax.position.y - firePoint.position.y, 2) + Mathf.Pow(fireShotMax.position.z - firePoint.position.z, 2));
+        VectorDirector = new Vector2(xValue, yValue);
         }
 
     void Update()
@@ -23,8 +25,54 @@ public class Weapon : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             StartCoroutine(Shoot());
-            
+
         }
+
+        if (Input.GetKeyDown(KeyCode.D)) //Right
+        {
+            xValue = 1; yValue = 0;
+            fireShotMax.localPosition = fireShotMax.localPosition * VectorDirector;
+            Debug.Log("Disparo a en: " + xValue + "//" + yValue);
+        }
+        if (Input.GetKeyDown(KeyCode.A)) //Left
+        {
+            xValue = -1; yValue = 0;
+            fireShotMax.localPosition = fireShotMax.localPosition * VectorDirector;
+            Debug.Log("Disparo a en: " + xValue + "//" + yValue);
+        }
+        if (Input.GetKeyDown(KeyCode.W)) //Up
+        {
+            xValue = 0; yValue = 1;
+            fireShotMax.localPosition = fireShotMax.localPosition * VectorDirector;
+            Debug.Log("Disparo a en: " + xValue + "//" + yValue);
+        }
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D)) //Up Right
+        {
+            xValue = 1; yValue = 1;
+            fireShotMax.localPosition = fireShotMax.localPosition * VectorDirector;
+            Debug.Log("Disparo a en: " + xValue + "//" + yValue);
+        }
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A)) //Up Left
+        {
+            xValue = -1; yValue = 1;
+            fireShotMax.localPosition = fireShotMax.localPosition * VectorDirector;
+            Debug.Log("Disparo a en: " + xValue + "//" + yValue);
+        }
+        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D)) //Down Right
+        {
+            xValue = 1; yValue = -1;
+            fireShotMax.localPosition = fireShotMax.localPosition * VectorDirector;
+            Debug.Log("Disparo a en: " + xValue + "//" + yValue);
+        }
+        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A)) //Down Left
+        {
+            xValue = -1; yValue = -1;
+            fireShotMax.localPosition = fireShotMax.localPosition * VectorDirector;
+            Debug.Log("Disparo a en: " + xValue + "//" + yValue);
+        }
+
+        VectorDirector.Set(xValue, yValue);
+        Debug.Log(fireShotMax.localPosition);
     }
 
     IEnumerator Shoot()
@@ -32,7 +80,7 @@ public class Weapon : MonoBehaviour
 
 
 
-        RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, new Vector2(xValue,yValue),chorreroMaths);  
+        RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position,VectorDirector,chorreroMaths);  
         if (hitInfo)
         {
          Enemy enemy =   hitInfo.transform.GetComponent<Enemy>();
@@ -65,5 +113,6 @@ public class Weapon : MonoBehaviour
 
 
          }
+
 
 }
