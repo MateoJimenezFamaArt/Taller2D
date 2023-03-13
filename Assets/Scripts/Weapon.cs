@@ -101,8 +101,8 @@ public class Weapon : MonoBehaviour
         }
         else
         {
-            lineRenderer.SetPosition(0, firePoint.position);
-            lineRenderer.SetPosition(1,fireShotMax.position); 
+           // lineRenderer.SetPosition(0, firePoint.position);
+           // lineRenderer.SetPosition(1,fireShotMax.position); 
         }
 
         lineRenderer.enabled = true;
