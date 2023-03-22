@@ -1,3 +1,4 @@
-Arreglar Instanciado de Raycast :D
-Arreglar Instanciado de Boom :D
-Intentar Dinamizar el FirePoint INPROGRESS
+Raycast cast direction PARCIAL WORK
+Raycast collision with player (DownLeft) CRITICAL ERROR
+LineRender 4 Laser or Preaimed Laser Sight ASK??
+PREAIM 

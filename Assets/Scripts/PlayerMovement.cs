@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         animator.SetFloat("Speed", horizontalMove);
-        Debug.Log("el bool de speed del animator es" + horizontalMove);
+       // Debug.Log("el float de speed del animator es " + horizontalMove);
 
 
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
