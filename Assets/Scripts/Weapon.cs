@@ -72,7 +72,7 @@ public class Weapon : MonoBehaviour
         }
 
         VectorDirector.Set(xValue, yValue);
-        Debug.Log(fireShotMax.localPosition);
+        //Debug.Log(fireShotMax.localPosition);
     }
 
     IEnumerator Shoot()

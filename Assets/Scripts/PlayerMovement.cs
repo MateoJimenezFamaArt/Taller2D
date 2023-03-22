@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -12,12 +13,22 @@ public class PlayerMovement : MonoBehaviour
     bool jump = false;
     bool crouch;
     
+    
 
-    Animator animator;
+     Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     void Update()
     {
-       horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        animator.SetFloat("Speed", horizontalMove);
+        Debug.Log("el bool de speed del animator es" + horizontalMove);
+
+
+        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
         if (Input.GetButtonDown("Jump"))
         {
@@ -32,6 +43,8 @@ public class PlayerMovement : MonoBehaviour
             crouch = false;
         }
 
+
+
     }
 
     public void onCrouching(bool isCrouching)
@@ -43,5 +56,7 @@ public class PlayerMovement : MonoBehaviour
     {
         controller.Move(horizontalMove * Time.deltaTime,crouch,jump);  
         jump = false;
+
+
     }
 }
