@@ -18,6 +18,7 @@ public class Weapon : MonoBehaviour
         {
         chorreroMaths = Mathf.Sqrt(Mathf.Pow(fireShotMax.position.x - firePoint.position.x, 2) + Mathf.Pow(fireShotMax.position.y - firePoint.position.y, 2) + Mathf.Pow(fireShotMax.position.z - firePoint.position.z, 2));
         VectorDirector = new Vector2(xValue, yValue);
+        fireShotMax.position = new Vector3(2.18f,0.197f,0);
         }
 
     private void LateUpdate()
@@ -38,6 +39,9 @@ public class Weapon : MonoBehaviour
 
         }
         */
+        
+        VectorDirector = new Vector2(xValue, yValue);
+
 
         if (Input.GetKeyDown(KeyCode.D)) //Right
         {
@@ -57,7 +61,7 @@ public class Weapon : MonoBehaviour
 
             } else
             {
-                if (Input.GetKeyUp(KeyCode.W)) //Up
+                if (Input.GetKey(KeyCode.W)) //Up
                 {
                     xValue = 0; yValue = 1;
                     fireShotMax.localPosition = fireShotMax.localPosition * VectorDirector;
@@ -101,13 +105,17 @@ public class Weapon : MonoBehaviour
                                     Debug.Log(fireShotMax.localPosition);
 
                                 }
+                                else
+                                {
+                                    fireShotMax.localPosition = fireShotMax.localPosition * VectorDirector;
+                                }
                             }
                         }
                     }
                 }
             }
         }
-        VectorDirector.Set(xValue, yValue);
+       // VectorDirector.Set(xValue, yValue);
     }
 
     IEnumerator Shoot()
