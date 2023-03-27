@@ -1,4 +1,7 @@
-Raycast cast direction PARCIAL WORK
-Raycast collision with player (DownLeft) CRITICAL ERROR
-LineRender 4 Laser or Preaimed Laser Sight ASK??
-PREAIM 
+Simpleshooting ok
+Damage Collisions ok
+First Level Layout Done
+Missing Audios
+Missing Respawn Mechanic
+Missing Level 2
+Missing Warp to level 2

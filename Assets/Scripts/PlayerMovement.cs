@@ -12,14 +12,22 @@ public class PlayerMovement : MonoBehaviour
     public float runSpeed = 40f;
     bool jump = false;
     bool crouch;
-    
-    
 
-     Animator animator;
+    //Invincible and health variables
+    public float timeInvincible = 2.0f;
+    bool isInvinicble;
+    public float invincibleTimer;
+
+    public int maxHealth = 3;
+    public int currentHealth;
+
+
+    Animator animator;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        currentHealth = maxHealth;
     }
 
     void Update()
@@ -44,6 +52,24 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
+        //Timer invencible
+
+        if (isInvinicble)
+        {
+            invincibleTimer -= Time.deltaTime;
+
+            if (invincibleTimer < 0)
+            {
+                isInvinicble = false;
+            }
+        }
+
+        if (currentHealth == 0)
+        {
+            Debug.Log("Mi parcero, te moriste");
+        }
+
+
 
     }
 
@@ -52,11 +78,33 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("IsCrouching", isCrouching);
     }
 
+    //HealthSistem Methjod
+    public void ChangeHealth(int amount)
+    {
+        if (amount < 0)
+        {
+
+           //animator.SetTrigger("Hit");
+
+            if (isInvinicble)
+            {
+                return;
+            }
+
+            isInvinicble = true;
+            invincibleTimer = timeInvincible;
+
+        }
+
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+
+        Debug.Log("Panita te hicieron un cambio en la vida " + maxHealth + "/" + currentHealth);
+    }
+
+
     private void FixedUpdate()
     {
-        controller.Move(horizontalMove * Time.deltaTime,crouch,jump);  
+        controller.Move(horizontalMove * Time.deltaTime, crouch, jump);
         jump = false;
-
-
     }
 }

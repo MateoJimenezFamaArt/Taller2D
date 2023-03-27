@@ -18,6 +18,17 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        PlayerMovement player = other.gameObject.GetComponent<PlayerMovement>();
+
+        if (player != null)
+        {
+            player.ChangeHealth(-1);
+            Debug.Log("Le meti un traque al parcero" + player.maxHealth + "//" + player.currentHealth);
+        }
+    }
+
     void Die()
     {
        // Instantiate(deathEffect, transform.position, Quaternion.identity);
