@@ -13,13 +13,30 @@ public class WeaponSimple : MonoBehaviour
     [SerializeField] private float LaserTime;
 
 
-    [SerializeField] public AudioSource audio;
+    [SerializeField] public AudioSource FireSource;
     [SerializeField] public AudioClip LaserSFX;
-    
+
+
+    private void Start()
+    {
+        InstantiateAudio(LaserSFX);
+    }
+
+    private void InstantiateAudio(AudioClip clip)
+    {
+        FireSource = gameObject.AddComponent<AudioSource>();
+        FireSource.clip = clip;
+    }
+
 
     public void PlaySound()
     {
-        audio.PlayOneShot(LaserSFX);
+        if (FireSource.isPlaying)
+        {
+            FireSource.Stop();
+            FireSource.Play();
+        }
+
     }
 
     void Update()
@@ -27,7 +44,7 @@ public class WeaponSimple : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Fire();
-            audio.PlayOneShot(LaserSFX);
+           
 
         }
 
@@ -51,6 +68,8 @@ public class WeaponSimple : MonoBehaviour
             Vector3 SinPunto = new Vector3(range, 0, 0) * puntoDisparo.right.x + puntoDisparo.position;
             StartCoroutine(LaserShot(SinPunto));
         }
+
+        PlaySound();
 
     }
 
