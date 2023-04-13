@@ -20,6 +20,7 @@ public class WeaponSimple : MonoBehaviour
     private void Start()
     {
         InstantiateAudio(LaserSFX);
+        LineVFX.enabled = false;
     }
 
     private void InstantiateAudio(AudioClip clip)
@@ -41,9 +42,10 @@ public class WeaponSimple : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetKeyDown(KeyCode.J))
         {
             Fire();
+            Debug.Log("Estas intentando disparar");
            
 
         }

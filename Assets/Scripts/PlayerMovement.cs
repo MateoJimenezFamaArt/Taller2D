@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Tilemaps;
+//using UnityEditor.Tilemaps;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -20,7 +21,6 @@ public class PlayerMovement : MonoBehaviour
 
     public int maxHealth = 3;
     public int currentHealth;
-
 
     Animator animator;
 
@@ -66,6 +66,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (currentHealth == 0)
         {
+            Scene scene = SceneManager.GetActiveScene(); 
+            SceneManager.LoadScene(scene.name);
             Debug.Log("Mi parcero, te moriste");
         }
 
@@ -101,10 +103,11 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("Panita te hicieron un cambio en la vida " + maxHealth + "/" + currentHealth);
     }
 
-
     private void FixedUpdate()
     {
-        controller.Move(horizontalMove * Time.deltaTime, crouch, jump);
-        jump = false;
+            controller.Move(horizontalMove * Time.deltaTime, crouch, jump);
+            jump = false;
     }
+
+
 }
