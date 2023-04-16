@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MovementR
+  m_Name: Moving
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -21,7 +21,7 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 1941616411, guid: 1aaf820c2e9db0e438d9c948283b1d40, type: 3}
-    - time: 0.18333334
+    - time: 0.16666667
       value: {fileID: 1227575135, guid: 54c0a360bdd584144ad313d6aa99b321, type: 3}
     - time: 0.33333334
       value: {fileID: -1804308895, guid: 41333b7ec1611704085cd5d7f08a8376, type: 3}

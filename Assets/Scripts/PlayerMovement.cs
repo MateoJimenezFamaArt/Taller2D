@@ -22,19 +22,26 @@ public class PlayerMovement : MonoBehaviour
     public int maxHealth = 3;
     public int currentHealth;
 
-    Animator animator;
+     public Animator animator;
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
         currentHealth = maxHealth;
     }
 
     void Update()
     {
-        animator.SetFloat("Speed", horizontalMove);
-       // Debug.Log("el float de speed del animator es " + horizontalMove);
 
+        if (horizontalMove == 0f)
+        {
+            animator.SetBool("Still", true);
+            Debug.Log("El horizontal move es " + horizontalMove);
+        } else
+        {
+            animator.SetFloat("Speed", horizontalMove);
+            Debug.Log("el float de speed del animator es " + horizontalMove);
+        }
 
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 

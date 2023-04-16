@@ -13,5 +13,6 @@ public class KillZone : MonoBehaviour
             player.ChangeHealth(-player.maxHealth);
             Debug.Log("Mate al parcero " + player.maxHealth + "//" + player.currentHealth);
         }
+
     }
 }

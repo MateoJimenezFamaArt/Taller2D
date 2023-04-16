@@ -210,8 +210,8 @@ GameObject:
   - component: {fileID: 5541368952440882035}
   - component: {fileID: 5541368952440882034}
   - component: {fileID: 5541368952440881994}
-  - component: {fileID: 5541368952440882045}
   - component: {fileID: 5541368952440881995}
+  - component: {fileID: 3670907223682132911}
   m_Layer: 6
   m_Name: Character
   m_TagString: Personaje
@@ -400,6 +400,7 @@ MonoBehaviour:
   invincibleTimer: 0
   maxHealth: 3
   currentHealth: 0
+  animator: {fileID: 3670907223682132911}
 --- !u!114 &5541368952440882034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -440,7 +441,15 @@ MonoBehaviour:
   LaserTime: 0.3
   FireSource: {fileID: 0}
   LaserSFX: {fileID: 8300000, guid: 550872132ec4a0944886575e35d00613, type: 3}
---- !u!95 &5541368952440882045
+--- !u!81 &5541368952440881995
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5541368952440882044}
+  m_Enabled: 0
+--- !u!95 &3670907223682132911
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -450,7 +459,7 @@ Animator:
   m_GameObject: {fileID: 5541368952440882044}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 12c19b3182c44054a8c26275bfe1fbcc, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5dec349b08b996946a9ef1942789d1f0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -460,14 +469,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!81 &5541368952440881995
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5541368952440882044}
-  m_Enabled: 1
 --- !u!1 &5541368952513906786
 GameObject:
   m_ObjectHideFlags: 0
