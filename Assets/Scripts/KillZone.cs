@@ -6,7 +6,7 @@ public class KillZone : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D other)
     {
-        PlayerMovement player = other.gameObject.GetComponent<PlayerMovement>();
+        TopDownMovement player = other.gameObject.GetComponent<TopDownMovement>();
 
         if (player != null)
         {
