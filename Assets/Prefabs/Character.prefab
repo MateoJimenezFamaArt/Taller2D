@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 5541368952440882034}
   - component: {fileID: 5541368952440881994}
   - component: {fileID: 5541368952440881995}
-  - component: {fileID: 3670907223682132911}
+  - component: {fileID: 369873066374252252}
   m_Layer: 6
   m_Name: Character
   m_TagString: Personaje
@@ -400,7 +400,7 @@ MonoBehaviour:
   invincibleTimer: 0
   maxHealth: 3
   currentHealth: 0
-  animator: {fileID: 3670907223682132911}
+  animator: {fileID: 369873066374252252}
 --- !u!114 &5541368952440882034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,7 +449,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5541368952440882044}
   m_Enabled: 0
---- !u!95 &3670907223682132911
+--- !u!95 &369873066374252252
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -459,7 +459,7 @@ Animator:
   m_GameObject: {fileID: 5541368952440882044}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5dec349b08b996946a9ef1942789d1f0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2d6bc4b5259f7fb439591f8cae3fe96d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
