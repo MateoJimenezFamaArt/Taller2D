@@ -22,12 +22,15 @@ public class PlayerMovement : MonoBehaviour
     public int maxHealth = 3;
     public int currentHealth;
 
+    public bool instakill;
+
      public Animator animator;
 
     private void Start()
     {
         //animator = GetComponent<Animator>();
         currentHealth = maxHealth;
+        instakill = false;
     }
 
     void Update()
@@ -72,12 +75,15 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (currentHealth == 0)
+        if (currentHealth == 0 )
         {
             Scene scene = SceneManager.GetActiveScene(); 
             SceneManager.LoadScene(scene.name);
             Debug.Log("Mi parcero, te moriste");
-        }
+        } 
+
+
+
 
 
 
@@ -109,6 +115,8 @@ public class PlayerMovement : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
 
         Debug.Log("Panita te hicieron un cambio en la vida " + maxHealth + "/" + currentHealth);
+
+
     }
 
     private void FixedUpdate()
