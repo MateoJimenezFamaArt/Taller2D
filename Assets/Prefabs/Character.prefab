@@ -210,7 +210,6 @@ GameObject:
   - component: {fileID: 5541368952440882035}
   - component: {fileID: 5541368952440882034}
   - component: {fileID: 5541368952440881994}
-  - component: {fileID: 5541368952440881995}
   - component: {fileID: 369873066374252252}
   m_Layer: 6
   m_Name: Character
@@ -400,6 +399,7 @@ MonoBehaviour:
   invincibleTimer: 0
   maxHealth: 3
   currentHealth: 0
+  instakill: 0
   animator: {fileID: 369873066374252252}
 --- !u!114 &5541368952440882034
 MonoBehaviour:
@@ -441,14 +441,6 @@ MonoBehaviour:
   LaserTime: 0.3
   FireSource: {fileID: 0}
   LaserSFX: {fileID: 8300000, guid: 550872132ec4a0944886575e35d00613, type: 3}
---- !u!81 &5541368952440881995
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5541368952440882044}
-  m_Enabled: 0
 --- !u!95 &369873066374252252
 Animator:
   serializedVersion: 5

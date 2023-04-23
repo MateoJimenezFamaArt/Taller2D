@@ -64,6 +64,14 @@ public class WeaponSimple : MonoBehaviour
                 Instantiate(ImpactFVX, raycastHit2D.point, Quaternion.identity);
                 StartCoroutine(LaserShot(raycastHit2D.point));
             }
+            else 
+            {
+                if ((raycastHit2D.transform.CompareTag("Ambiente")))
+                {
+                    Instantiate(ImpactFVX, raycastHit2D.point, Quaternion.identity);
+                    StartCoroutine(LaserShot(raycastHit2D.point));
+                }
+            }
         }
         else
         {
