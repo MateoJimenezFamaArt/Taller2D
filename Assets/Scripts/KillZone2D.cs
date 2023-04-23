@@ -11,6 +11,7 @@ public class KillZone2D : MonoBehaviour
         if (playerr != null)
         {
             playerr.ChangeHealth(-playerr.maxHealth);
+            playerr.instakill = true;
             Debug.Log("Mate al parcero " + playerr.maxHealth + "//" + playerr.currentHealth);
         }
     }

@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     public int maxHealth = 3;
     public int currentHealth;
 
+    private Health health;
+
     public bool instakill;
 
      public Animator animator;
@@ -31,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         //animator = GetComponent<Animator>();
         currentHealth = maxHealth;
         instakill = false;
+       health = GameObject.FindObjectOfType<Health>();
     }
 
     void Update()
@@ -40,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         if (horizontalMove == 0f)
         {
             animator.SetBool("Still", true);
-            Debug.Log("Still es verdadero // move es " + horizontalMove);
+           // Debug.Log("Still es verdadero // move es " + horizontalMove);
         } else
         {
             animator.SetBool("Still", false);
@@ -75,15 +78,20 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        //Death
+
         if (currentHealth == 0 )
         {
             Scene scene = SceneManager.GetActiveScene(); 
             SceneManager.LoadScene(scene.name);
             Debug.Log("Mi parcero, te moriste");
-        } 
+        }
 
-
-
+        //UI Life
+      /*  Health health = gameObject.GetComponent<Health>();
+        health.numOfHearts = maxHealth;
+        health.health = currentHealth;
+      */
 
 
 
@@ -113,6 +121,9 @@ public class PlayerMovement : MonoBehaviour
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        health.health = currentHealth;
+
+        Debug.Log ("esta es tu health" + health.health);
 
         Debug.Log("Panita te hicieron un cambio en la vida " + maxHealth + "/" + currentHealth);
 

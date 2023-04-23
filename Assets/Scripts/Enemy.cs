@@ -63,13 +63,19 @@ public class Enemy : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         PlayerMovement player = other.gameObject.GetComponent<PlayerMovement>();
+        Health health = other.gameObject.GetComponent<Health>();
 
         if (player != null)
         {
             player.ChangeHealth(-1);
             Debug.Log("Le meti un traque al parcero" + player.maxHealth + "//" + player.currentHealth);
+            health.health -= 1;
+        }
+        if (other.gameObject.tag == "Personaje")
+        {
 
         }
+
     }
    
 
