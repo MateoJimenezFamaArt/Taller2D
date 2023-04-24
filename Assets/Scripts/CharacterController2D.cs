@@ -89,16 +89,20 @@ public class CharacterController2D : MonoBehaviour
                 // Reduce the speed by the crouchSpeed multiplier if 0 there will be no crouch movement 
                 move *= m_CrouchSpeed;
 
+                /*
                 // Disable one of the colliders when crouching
                 //Add an extra feature where once crouching there is an animator signal being sent in order to do the crouch animation
                 if (m_CrouchDisableCollider != null)
                     m_CrouchDisableCollider.enabled = false;
+                */
             }
             else
             {
+                /*
                 // Enable the collider when not crouching
                 if (m_CrouchDisableCollider != null)
                     m_CrouchDisableCollider.enabled = true;
+                */
 
                 if (m_wasCrouching) // Send the signal that the crouching state is no more
                 {

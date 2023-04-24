@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 40032dd84c0b68e4d81c5fe80910047f
+guid: 379c39af656bc9b4e83baf0904c6879d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -36,9 +36,9 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sueloyplat1_0
+      name: edif3_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 64
-        width: 48
-        height: 16
+        x: 144
+        y: 96
+        width: 272
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,50 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 286f588afd4dc1d478edd1ced12b79fc
-      internalID: 771090899
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sueloyplat1_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a540b9d75f9999447be54818da85858b
-      internalID: -248114895
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sueloyplat1_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 16
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2303bb58279720841a5f74f81b03135c
-      internalID: -1588439596
+      spriteID: 14eef7bf7ee526d4b9ac7bb8a85ece2f
+      internalID: -843377553
       vertices: []
       indices: 
       edges: []
@@ -190,9 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sueloyplat1_0: 771090899
-      sueloyplat1_2: -1588439596
-      sueloyplat1_1: -248114895
+      edif3_0: -843377553
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

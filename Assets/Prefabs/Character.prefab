@@ -204,8 +204,7 @@ GameObject:
   - component: {fileID: 5541368952440882037}
   - component: {fileID: 5541368952440882036}
   - component: {fileID: 5541368952440882039}
-  - component: {fileID: 5541368952440882038}
-  - component: {fileID: 5541368952440882033}
+  - component: {fileID: 8760392051194768306}
   - component: {fileID: 5541368952440882032}
   - component: {fileID: 5541368952440882035}
   - component: {fileID: 5541368952440882034}
@@ -311,8 +310,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &5541368952440882038
-BoxCollider2D:
+--- !u!70 &8760392051194768306
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -324,35 +323,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.051495567, y: 0.20746249}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.25097394, y: 0.36762816}
-    oldSize: {x: 0.49, y: 0.78}
-    newSize: {x: 0.49, y: 0.78}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.3489456, y: 0.57157505}
-  m_EdgeRadius: 0
---- !u!58 &5541368952440882033
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5541368952440882044}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 4d8b07ed9c5b5154cb78d4ad1140d94e, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.028441712, y: -0.08}
-  serializedVersion: 2
-  m_Radius: 0.19474001
+  m_Offset: {x: 0.010482788, y: 0.080433905}
+  m_Size: {x: 0.2770691, y: 0.8256322}
+  m_Direction: 0
 --- !u!114 &5541368952440882032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,7 +347,7 @@ MonoBehaviour:
     m_Bits: 183
   m_GroundCheck: {fileID: 5541368952513906787}
   m_CeilingCheck: {fileID: 5541368951003081812}
-  m_CrouchDisableCollider: {fileID: 5541368952440882038}
+  m_CrouchDisableCollider: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
