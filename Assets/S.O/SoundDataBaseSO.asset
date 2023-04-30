@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 455ffbc2534082c46942cafaf64fc6d8, type: 3}
+  m_Name: SoundDataBaseSO
+  m_EditorClassIdentifier: 
+  PlayerShootSFX: {fileID: 8300000, guid: 550872132ec4a0944886575e35d00613, type: 3}
+  PlayerHealthDownSFX: {fileID: 8300000, guid: 550872132ec4a0944886575e35d00613, type: 3}
+  PlayerHealthUpSFX: {fileID: 8300000, guid: 550872132ec4a0944886575e35d00613, type: 3}
+  PlayerDieSFX: {fileID: 8300000, guid: 550872132ec4a0944886575e35d00613, type: 3}
+  EnemyShootSFX: {fileID: 8300000, guid: 550872132ec4a0944886575e35d00613, type: 3}
+  UIMusic: {fileID: 8300000, guid: 0e6e0456e823c1543b80b12d87cf8419, type: 3}
+  Level1Music: {fileID: 8300000, guid: 63f9836357d38e442a41df42a68e92a7, type: 3}
+  Level2Music: {fileID: 8300000, guid: 63f9836357d38e442a41df42a68e92a7, type: 3}
+  Level3Music: {fileID: 8300000, guid: 0e6e0456e823c1543b80b12d87cf8419, type: 3}
+  DefaultSound: {fileID: 8300000, guid: 550872132ec4a0944886575e35d00613, type: 3}
