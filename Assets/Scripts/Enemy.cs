@@ -83,7 +83,8 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-       // Instantiate(deathEffect, transform.position, Quaternion.identity);
+        // Instantiate(deathEffect, transform.position, Quaternion.identity);
+        AudioManagerScript.instance.PlaySFXs(AudioManagerScript.AudioSamples.EnemyDie);
         Destroy(gameObject);
     }
 }

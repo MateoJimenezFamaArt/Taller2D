@@ -4,7 +4,7 @@ using UnityEngine.Events;
 public class CharacterController2D : MonoBehaviour
 {
     [SerializeField] private float m_JumpForce = 400f;                          // Force of the jump
-    [Range(0, 1)][SerializeField] private float m_CrouchSpeed = .36f;           // Amount of maxSpeed player can reach to crouching movement. 1 = 100%
+    //[Range(0, 1)][SerializeField] private float m_CrouchSpeed = .36f;           // Amount of maxSpeed player can reach to crouching movement. 1 = 100%
     [Range(0, .3f)][SerializeField] private float m_MovementSmoothing = .05f;   // How much to smooth out the movement Different way of smoothing out the movement to make it feel better
     [SerializeField] private bool m_AirControl = false;                         // Whether or not a player can steer while jumping; Should allways be true tho
     [SerializeField] private LayerMask m_WhatIsGround;                          // A mask determining what is ground to the character 
@@ -87,7 +87,7 @@ public class CharacterController2D : MonoBehaviour
                 }
 
                 // Reduce the speed by the crouchSpeed multiplier if 0 there will be no crouch movement 
-                move *= m_CrouchSpeed;
+               //move *= m_CrouchSpeed;
 
                 /*
                 // Disable one of the colliders when crouching

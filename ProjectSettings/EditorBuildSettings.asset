@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ThridLevel.unity
     guid: 3a732c4d4b1751f44aec4d7d92253e1b
+  - enabled: 1
+    path: Assets/Scenes/BossScene.unity
+    guid: 8682901666d89bf479dbc20a4ff3e38b
+  - enabled: 1
+    path: Assets/Scenes/Creds.unity
+    guid: 06d843cb97b78da49abf7856ae286e44
   m_configObjects: {}

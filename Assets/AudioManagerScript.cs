@@ -14,7 +14,7 @@ public class AudioManagerScript : MonoBehaviour
         //GamePLaySfx
         Shoot = 0, EnemyShoot = 1, CharacterHit = 2, CharacterHealthUp = 3, EnemyDie = 4, PlayerDeath = 5,
         //Music For Game
-        UIMusic = 6, GameplayMusicLVl1 = 7, GameplayMusicLVl2 = 8, GameplayMusicLVl3 = 9
+        UIMusic = 6, GameplayMusicLVl1 = 7, GameplayMusicLVl2 = 8, GameplayMusicLVl3 = 9 , GameplayMusicBoss = 10
     }
 
     private void Awake()
@@ -72,12 +72,19 @@ public class AudioManagerScript : MonoBehaviour
                 audioSourceMusic.Stop();
                 audioSourceMusic.Play();
                 break;
-            case "ThirdLevel":
+            case "ThridLevel":
                 AudioClip currentClipC = SoundDTBase.GetFromDTBase(AudioSamples.GameplayMusicLVl3);
                 audioSourceMusic.clip = currentClipC;
                 audioSourceMusic.Stop();
                 audioSourceMusic.Play();
                 break;
+            case "BossScene":
+                AudioClip currentClipD = SoundDTBase.GetFromDTBase(AudioSamples.GameplayMusicLVl3);
+                audioSourceMusic.clip = currentClipD;
+                audioSourceMusic.Stop();
+                audioSourceMusic.Play();
+                break;
+
         }
     }
 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SoundDataBaseSO
   m_EditorClassIdentifier: 
   PlayerShootSFX: {fileID: 8300000, guid: 550872132ec4a0944886575e35d00613, type: 3}
-  PlayerHealthDownSFX: {fileID: 8300000, guid: 7d97efa205a9f6b429ba4167e6214bc0, type: 3}
+  PlayerHealthDownSFX: {fileID: 8300000, guid: b6ee039ab3c7c804292564b05635c745, type: 3}
   PlayerHealthUpSFX: {fileID: 8300000, guid: e614b878dfb1e5341a9198bfbff5918b, type: 3}
   PlayerDieSFX: {fileID: 8300000, guid: 1490c77d06f27524c84bd33205507677, type: 3}
   EnemyShootSFX: {fileID: 8300000, guid: bcdb799a1f6359b4187c8f1f618c0df2, type: 3}
@@ -22,4 +22,5 @@ MonoBehaviour:
   Level1Music: {fileID: 8300000, guid: bc889f11ad0d5ac4296963eed9df4305, type: 3}
   Level2Music: {fileID: 8300000, guid: f8462e4a7c16bc24183a108ad5c049df, type: 3}
   Level3Music: {fileID: 8300000, guid: d3685f7302ac3ab43b667c9b7312618d, type: 3}
+  LevelBossMusic: {fileID: 8300000, guid: dc56b91c49516834d9bb12c131065baf, type: 3}
   DefaultSound: {fileID: 8300000, guid: f9dbcec6e02bbf04993fb919c676d743, type: 3}

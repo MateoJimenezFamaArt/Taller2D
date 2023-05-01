@@ -35,16 +35,31 @@ public class WeaponSimple : MonoBehaviour
 
     }
 
+
     private void Fire()
     {
         RaycastHit2D raycastHit2D = Physics2D.Raycast(puntoDisparo.position, puntoDisparo.right, range);
 
         if (raycastHit2D)
         {
+            if (raycastHit2D.transform.CompareTag("BOSS"))
+            {
+                raycastHit2D.transform.GetComponent<BossScript>().DMG(10);
+                Instantiate(ImpactFVX, raycastHit2D.point, Quaternion.identity);
+                StartCoroutine(LaserShot(raycastHit2D.point));
+            }
+
+
+            if (raycastHit2D.transform.CompareTag("ShooterEnemy"))
+            {
+               raycastHit2D.transform.GetComponent<ShooterHealth>().TomarDmg(10);
+                Instantiate(ImpactFVX, raycastHit2D.point, Quaternion.identity);
+                StartCoroutine(LaserShot(raycastHit2D.point));
+            }
+
             if (raycastHit2D.transform.CompareTag("Enemigo"))
             {
                 raycastHit2D.transform.GetComponent<Enemy>().TakeDamage(10);
-                raycastHit2D.transform.GetComponent<ShooterHealth>().TakeDamage(10);
                 Instantiate(ImpactFVX, raycastHit2D.point, Quaternion.identity);
                 StartCoroutine(LaserShot(raycastHit2D.point));
             }
@@ -62,6 +77,7 @@ public class WeaponSimple : MonoBehaviour
             Vector3 SinPunto = new Vector3(range, 0, 0) * puntoDisparo.right.x + puntoDisparo.position;
             StartCoroutine(LaserShot(SinPunto));
         }
+
         AudioManagerScript.instance.PlaySFXs(AudioManagerScript.AudioSamples.Shoot);
     }
 

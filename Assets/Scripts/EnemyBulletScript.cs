@@ -39,6 +39,7 @@ public class EnemyBulletScript : MonoBehaviour
         PlayerMovement player = other.gameObject.GetComponent<PlayerMovement>();
         if (other.gameObject.CompareTag("Personaje"))
         {
+
             player.ChangeHealth(-1);
 
             Destroy(gameObject);

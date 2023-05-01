@@ -82,9 +82,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (currentHealth == 0 )
         {
+            AudioManagerScript.instance.PlaySFXs(AudioManagerScript.AudioSamples.PlayerDeath);
             Scene scene = SceneManager.GetActiveScene(); 
             SceneManager.LoadScene(scene.name);
             Debug.Log("Mi parcero, te moriste");
+
         }
 
         //UI Life
@@ -102,13 +104,13 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("IsCrouching", isCrouching);
     }
 
-    //HealthSistem Methjod
+    //HealthSystem Method
     public void ChangeHealth(int amount)
     {
         if (amount < 0)
         {
-
-           //animator.SetTrigger("Hit");
+            //animator.SetTrigger("Hit");
+           AudioManagerScript.instance.PlaySFXs(AudioManagerScript.AudioSamples.CharacterHit);
 
             if (isInvinicble)
             {
@@ -118,6 +120,9 @@ public class PlayerMovement : MonoBehaviour
             isInvinicble = true;
             invincibleTimer = timeInvincible;
 
+        } else if(amount > 0)
+        {
+            AudioManagerScript.instance.PlaySFXs(AudioManagerScript.AudioSamples.CharacterHealthUp);
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
