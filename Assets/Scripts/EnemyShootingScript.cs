@@ -39,7 +39,7 @@ public class EnemyShootingScript : MonoBehaviour
 
     void shoot()
     {
-        AudioManagerScript.instance.PlaySFXs(AudioManagerScript.AudioSamples.EnemyShoot);
+       AudioManagerScript.instance.PlaySFXs(AudioManagerScript.AudioSamples.EnemyShoot);
         Instantiate(bullet,bulletpos.position,Quaternion.identity);
     }
 }

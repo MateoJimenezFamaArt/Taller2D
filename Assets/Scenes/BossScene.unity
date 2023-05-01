@@ -1656,7 +1656,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293484004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.44, y: -1.8, z: 0}
+  m_LocalPosition: {x: -4.59, y: -1.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2048,6 +2048,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1934287562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1934287563}
+  m_Layer: 0
+  m_Name: BarrierSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1934287563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934287562}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.51, y: -0.33, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2120547547}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2120547543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2094,8 +2125,8 @@ MonoBehaviour:
   HommingBullet: {fileID: 327608853825846164, guid: f49ce5bb431501d40bc3190f775cdd0a, type: 3}
   HommingBulletPos: {fileID: 1453396080}
   BossHitForHommingBullet: 0
-  Bioploymer: {fileID: 8449582581889647056, guid: 0601c562c7f434349a8c55b5779bceae, type: 3}
-  Bioploymerpos: {fileID: 1293484005}
+  Pill: {fileID: 2504964215219487103, guid: c9d3ec02b8c6d7143874f036f22fcc9f, type: 3}
+  Pillpos: {fileID: 1293484005}
   BossHitForBioPolymer: 0
   level: 0
 --- !u!50 &2120547545
@@ -2188,6 +2219,7 @@ Transform:
   - {fileID: 1270406653}
   - {fileID: 1453396080}
   - {fileID: 1293484005}
+  - {fileID: 1934287563}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

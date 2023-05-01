@@ -23,6 +23,7 @@ public class BossScript : MonoBehaviour
     [SerializeField]private bool IsInvincible;
 
 
+
     //Bullets A,B,C
     public GameObject bullet;
     public Transform bulletposA,bulletposB,bulletposC;
@@ -33,8 +34,8 @@ public class BossScript : MonoBehaviour
     [SerializeField] private int BossHitForHommingBullet;
 
     //Biopolymer
-    public GameObject Bioploymer;
-    public Transform Bioploymerpos;
+    public GameObject Pill;
+    public Transform Pillpos;
     [SerializeField]private int BossHitForBioPolymer;
 
 
@@ -65,6 +66,7 @@ public class BossScript : MonoBehaviour
         //InvencibilityTimer
         if (IsInvincible)
         {
+
             InvincibleTimer -= Time.deltaTime;
             //Set Animation of idle to stop
             //Set Animation of hit to begin
@@ -108,7 +110,7 @@ public class BossScript : MonoBehaviour
         //Spawns Bio Polymer WORK IN PROGRESS
         if (BossHitForBioPolymer == 2)
         {
-            Instantiate(Bioploymer, Bioploymerpos.position, Quaternion.identity);
+            Instantiate(Pill, Pillpos.position, Quaternion.identity);
             BossHitForBioPolymer = 0;
         }
         //Done
