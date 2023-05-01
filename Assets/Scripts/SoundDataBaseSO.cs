@@ -9,6 +9,7 @@ public class SoundDataBaseSO : ScriptableObject
     [SerializeField] AudioClip PlayerHealthUpSFX = default;
     [SerializeField] AudioClip PlayerDieSFX = default;
     [SerializeField] AudioClip EnemyShootSFX = default;
+    [SerializeField] AudioClip EnemyDeathSFX = default;
     [SerializeField] AudioClip UIMusic = default;
     [SerializeField] AudioClip Level1Music = default;
     [SerializeField] AudioClip Level2Music = default;
@@ -26,6 +27,7 @@ public class SoundDataBaseSO : ScriptableObject
         AudioManagerScript.AudioSamples.GameplayMusicLVl1 => Level1Music,
         AudioManagerScript.AudioSamples.GameplayMusicLVl2 => Level2Music,
         AudioManagerScript.AudioSamples.GameplayMusicLVl3 => Level3Music,
+        AudioManagerScript.AudioSamples.EnemyDie => EnemyDeathSFX,
         _ => DefaultSound
     }; 
 

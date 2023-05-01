@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f90edc7bf8d9f84296062b4c683a657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 30
   velocidad: 1.5
   controladorSuelo: {fileID: 8210892248590114309}
   distancia: 0

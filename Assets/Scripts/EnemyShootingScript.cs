@@ -27,7 +27,7 @@ public class EnemyShootingScript : MonoBehaviour
         {
             timer += Time.deltaTime;
 
-            if (timer > 2)
+            if (timer > 1.5f)
             {
                 Debug.Log("Bullet Shot");
                 timer = 0;

@@ -44,6 +44,7 @@ public class WeaponSimple : MonoBehaviour
             if (raycastHit2D.transform.CompareTag("Enemigo"))
             {
                 raycastHit2D.transform.GetComponent<Enemy>().TakeDamage(10);
+                raycastHit2D.transform.GetComponent<ShooterHealth>().TakeDamage(10);
                 Instantiate(ImpactFVX, raycastHit2D.point, Quaternion.identity);
                 StartCoroutine(LaserShot(raycastHit2D.point));
             }
