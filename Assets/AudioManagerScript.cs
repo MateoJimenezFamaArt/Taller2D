@@ -14,7 +14,7 @@ public class AudioManagerScript : MonoBehaviour
         //GamePLaySfx
         Shoot = 0, EnemyShoot = 1, CharacterHit = 2, CharacterHealthUp = 3, EnemyDie = 4, PlayerDeath = 5,
         //Music For Game
-        UIMusic = 6, GameplayMusicLVl1 = 7, GameplayMusicLVl2 = 8, GameplayMusicLVl3 = 9 , GameplayMusicBoss = 10
+        UIMusic = 6, GameplayMusicLVl1 = 7, GameplayMusicLVl2 = 8, GameplayMusicLVl3 = 9 , GameplayMusicBoss = 10, CreditsMusic = 11, SecretMusic = 12
     }
 
     private void Awake()
@@ -79,12 +79,23 @@ public class AudioManagerScript : MonoBehaviour
                 audioSourceMusic.Play();
                 break;
             case "BossScene":
-                AudioClip currentClipD = SoundDTBase.GetFromDTBase(AudioSamples.GameplayMusicLVl3);
+                AudioClip currentClipD = SoundDTBase.GetFromDTBase(AudioSamples.GameplayMusicBoss);
                 audioSourceMusic.clip = currentClipD;
                 audioSourceMusic.Stop();
                 audioSourceMusic.Play();
                 break;
-
+            case "Creds":
+                AudioClip currentClipE = SoundDTBase.GetFromDTBase(AudioSamples.CreditsMusic);
+                audioSourceMusic.clip = currentClipE;
+                audioSourceMusic.Stop();
+                audioSourceMusic.Play();
+                break;
+            case "SecretScene":
+                AudioClip currentClipF = SoundDTBase.GetFromDTBase(AudioSamples.SecretMusic);
+                audioSourceMusic.clip = currentClipF;
+                audioSourceMusic.Stop();
+                audioSourceMusic.Play();
+                break;
         }
     }
 

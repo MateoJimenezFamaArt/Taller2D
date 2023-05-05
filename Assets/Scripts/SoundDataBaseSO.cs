@@ -15,6 +15,8 @@ public class SoundDataBaseSO : ScriptableObject
     [SerializeField] AudioClip Level2Music = default;
     [SerializeField] AudioClip Level3Music = default;
     [SerializeField] AudioClip LevelBossMusic = default;
+    [SerializeField] AudioClip CreditsMusic = default;
+    [SerializeField] AudioClip SecretMusic = default;
     [SerializeField] AudioClip DefaultSound = default;
 
     public AudioClip GetFromDTBase(AudioManagerScript.AudioSamples Audios) => Audios switch
@@ -29,7 +31,9 @@ public class SoundDataBaseSO : ScriptableObject
         AudioManagerScript.AudioSamples.GameplayMusicLVl2 => Level2Music,
         AudioManagerScript.AudioSamples.GameplayMusicLVl3 => Level3Music,
         AudioManagerScript.AudioSamples.GameplayMusicBoss => LevelBossMusic,
+        AudioManagerScript.AudioSamples.CreditsMusic => CreditsMusic,
         AudioManagerScript.AudioSamples.EnemyDie => EnemyDeathSFX,
+        AudioManagerScript.AudioSamples.SecretMusic => SecretMusic,
         _ => DefaultSound
     }; 
 

@@ -1,7 +1,5 @@
-Simpleshooting ok
-Damage Collisions ok
-First Level Layout Done
-Missing Audios
-Missing Respawn Mechanic
-Missing Level 2
-Missing Warp to level 2
+Feedback Victoria
+Animacion Jefe
+UI de vidas
+Sonidos Lvl2
+

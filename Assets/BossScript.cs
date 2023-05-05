@@ -22,6 +22,10 @@ public class BossScript : MonoBehaviour
     private float TimeInvincible = 4f;
     [SerializeField]private bool IsInvincible;
 
+    //Animation
+    public Animator animator;
+
+
 
 
     //Bullets A,B,C
@@ -66,7 +70,7 @@ public class BossScript : MonoBehaviour
         //InvencibilityTimer
         if (IsInvincible)
         {
-
+            animator.SetBool("Invincible", true);
             InvincibleTimer -= Time.deltaTime;
             //Set Animation of idle to stop
             //Set Animation of hit to begin
@@ -74,6 +78,7 @@ public class BossScript : MonoBehaviour
             if (InvincibleTimer < 0)
             {
                 IsInvincible = false;
+                animator.SetBool("Invincible", false);
                 //Set Animation of hit to stop
                 //Set Animation of idle to begin
             }

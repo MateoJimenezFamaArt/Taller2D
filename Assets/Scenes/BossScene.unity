@@ -2092,6 +2092,7 @@ GameObject:
   - component: {fileID: 2120547545}
   - component: {fileID: 2120547544}
   - component: {fileID: 2120547548}
+  - component: {fileID: 2120547549}
   m_Layer: 0
   m_Name: Boss
   m_TagString: BOSS
@@ -2118,6 +2119,7 @@ MonoBehaviour:
   Timertxt: {fileID: 170568000}
   InvincibleTimer: 0
   IsInvincible: 0
+  animator: {fileID: 2120547549}
   bullet: {fileID: 1867010219794439175, guid: e226d70784cd7c34a8f18ec9582c5456, type: 3}
   bulletposA: {fileID: 1557492106}
   bulletposB: {fileID: 1282146845}
@@ -2249,3 +2251,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.72, y: 4.35}
   m_EdgeRadius: 0
+--- !u!95 &2120547549
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120547543}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 388ccc2e27021144b9dd210e39f63073, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
