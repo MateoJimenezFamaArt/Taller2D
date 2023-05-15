@@ -24,6 +24,24 @@ EditorBuildSettings:
     path: Assets/Scenes/Creds.unity
     guid: 06d843cb97b78da49abf7856ae286e44
   - enabled: 1
-    path: Assets/Scenes/SecretScene.unity
+    path: Assets/Scenes/RelicFinalScene.unity
     guid: 0f45eb4f72b737a45918f27f29b71b52
+  - enabled: 1
+    path: Assets/Scenes/0Txt.unity
+    guid: cff1c9827e71ccc47b0ccd9e84048fb7
+  - enabled: 1
+    path: Assets/Scenes/1Txt.unity
+    guid: bada19db774316a4492c5f110d67fa5a
+  - enabled: 1
+    path: Assets/Scenes/2Txt.unity
+    guid: 8ef0add1c4e587f48a845c91c307d354
+  - enabled: 1
+    path: Assets/Scenes/3Txt.unity
+    guid: 39c62b1604008b647b9be0ab8c3d674f
+  - enabled: 1
+    path: Assets/Scenes/4Txt.unity
+    guid: b1182b0e3cde87649ab037c589485fd3
+  - enabled: 1
+    path: Assets/Scenes/SecretScene.unity
+    guid: 77ce62d1a1d84a64991100838c85ebdd
   m_configObjects: {}

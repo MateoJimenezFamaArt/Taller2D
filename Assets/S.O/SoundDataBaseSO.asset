@@ -25,4 +25,7 @@ MonoBehaviour:
   LevelBossMusic: {fileID: 8300000, guid: dc56b91c49516834d9bb12c131065baf, type: 3}
   CreditsMusic: {fileID: 8300000, guid: ce591cb084bc6164d9a2d2c58d0a38a8, type: 3}
   SecretMusic: {fileID: 8300000, guid: 0e6e0456e823c1543b80b12d87cf8419, type: 3}
+  BossStartSFX: {fileID: 8300000, guid: 3473261633f6cb446b2705f7fbb7e666, type: 3}
+  Win: {fileID: 8300000, guid: e8bdf0464e6e8db45819fe7c57de414c, type: 3}
+  MotoDie: {fileID: 8300000, guid: fd60f2b46ad23194cb7ec5dbbe955bae, type: 3}
   DefaultSound: {fileID: 8300000, guid: f9dbcec6e02bbf04993fb919c676d743, type: 3}

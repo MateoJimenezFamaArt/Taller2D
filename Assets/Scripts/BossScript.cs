@@ -21,6 +21,7 @@ public class BossScript : MonoBehaviour
     [SerializeField]private float InvincibleTimer;
     private float TimeInvincible = 4f;
     [SerializeField]private bool IsInvincible;
+    public GameObject WinerCanva, UICharacter;
 
     //Animation
     public Animator animator;
@@ -107,8 +108,9 @@ public class BossScript : MonoBehaviour
             shootC();
         }
         //Starts Homming instantiation
-        if (BossHitForHommingBullet == 1)
+        if (BossHitForHommingBullet == 1 && health != 0)
         {
+            animator.SetBool("Homming",true);
             Instantiate(HommingBullet, HommingBulletPos.position, Quaternion.identity);
             BossHitForHommingBullet = 0;
         }
@@ -118,6 +120,8 @@ public class BossScript : MonoBehaviour
             Instantiate(Pill, Pillpos.position, Quaternion.identity);
             BossHitForBioPolymer = 0;
         }
+
+
         //Done
 
     }//UPDATE END
@@ -172,9 +176,12 @@ public class BossScript : MonoBehaviour
 
     public void Die()
     {
-
         Destroy(gameObject);
-        LoadNextLvl();
+        UICharacter.SetActive(false);
+        WinerCanva.SetActive(true);
+        AudioManagerScript.instance.PlaySFXs(AudioManagerScript.AudioSamples.Win);
+        AudioManagerScript.instance.audioSourceMusic.Stop();
+        // LoadNextLvl();
     }
 
     [SerializeField] private int level = 5;

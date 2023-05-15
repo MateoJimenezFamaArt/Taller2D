@@ -37,6 +37,7 @@ public class TopDownMovement : MonoBehaviour
 
         if (currentHealth == 0)
         {
+            AudioManagerScript.instance.PlaySFXs(AudioManagerScript.AudioSamples.MotoCrash);
             Scene scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name);
             Debug.Log("Mi parcero, te moriste");

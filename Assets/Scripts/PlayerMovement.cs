@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
     //Invincible and health variables
     public float timeInvincible = 2.0f;
-    bool isInvinicble;
+    public bool isInvinicble;
     public float invincibleTimer;
 
     public int maxHealth = 3;

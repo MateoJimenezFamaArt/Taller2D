@@ -7,14 +7,15 @@ public class AudioManagerScript : MonoBehaviour
 {
     [SerializeField] SoundDataBaseSO SoundDTBase;
     public SoundDataBaseSO PublicAudioDatabase => SoundDTBase;
-    [SerializeField] AudioSource audioSourceSFX, audioSourceMusic;
+    public AudioSource audioSourceSFX, audioSourceMusic;
     public static AudioManagerScript instance = null;
     public enum AudioSamples
     {
         //GamePLaySfx
         Shoot = 0, EnemyShoot = 1, CharacterHit = 2, CharacterHealthUp = 3, EnemyDie = 4, PlayerDeath = 5,
         //Music For Game
-        UIMusic = 6, GameplayMusicLVl1 = 7, GameplayMusicLVl2 = 8, GameplayMusicLVl3 = 9 , GameplayMusicBoss = 10, CreditsMusic = 11, SecretMusic = 12
+        UIMusic = 6, GameplayMusicLVl1 = 7, GameplayMusicLVl2 = 8, GameplayMusicLVl3 = 9 , GameplayMusicBoss = 10, CreditsMusic = 11, SecretMusic = 12,
+        BossStart=13, MotoCrash = 14, Win = 15
     }
 
     private void Awake()
